@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Upload Prescription – MediSphere Pharmacy</title>
+<meta name="description" content="Securely upload your prescription. Our pharmacists confirm availability and delivery within 15 minutes." />
+<link rel="canonical" href="./prescription-upload.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+<link href="../css/style.css" rel="stylesheet" />
+</head>
+<body>
+<div class="ms-topbar"><div class="ms-container"><div class="ms-topbar-left"><span><i class="ri-time-line"></i> Open 7 Days</span><span><i class="ri-shield-check-line"></i> HIPAA-aware handling</span></div><div class="ms-topbar-right"><a href="tel:+15550100"><i class="ri-phone-line"></i> +1 555 0100</a></div></div></div>
+<header class="ms-header"><div class="ms-container"><nav class="ms-nav"><a href="../index.html" class="ms-logo"><span class="ms-logo-mark"><i class="ri-capsule-fill"></i></span> MediSphere</a><ul class="ms-menu"><li><a href="../index.html">Home</a></li><li><a href="./about.html">About</a></li><li><a href="./products.html">Products</a></li><li><a href="./services.html">Services</a></li><li><a href="./contact.html">Contact</a></li></ul><div class="ms-nav-actions"><button class="ms-icon-btn" data-toggle="theme"><i class="ri-moon-line"></i></button><button class="ms-icon-btn" data-toggle="rtl"><i class="ri-translate-2"></i></button><button class="ms-icon-btn ms-burger" data-toggle="menu"><i class="ri-menu-line"></i></button></div></nav></div></header>
+
+<main>
+<section class="ms-page-head"><div class="ms-container"><ul class="ms-breadcrumb"><li><a href="../index.html">Home</a></li><li>Upload Prescription</li></ul><h1>Upload Your Prescription</h1><p style="max-width:640px;">A licensed pharmacist reviews every upload — usually within 15 minutes. Encrypted, private, and delivered discreetly to your door.</p></div></section>
+
+<section>
+  <div class="ms-container">
+    <div class="ms-split">
+      <div data-aos="fade-right">
+        <h2>How It Works</h2>
+        <ol class="ms-check-list" style="counter-reset:step;">
+          <li><i class="ri-check-line"></i> Fill in your details and attach a clear photo or PDF of your prescription</li>
+          <li><i class="ri-check-line"></i> A pharmacist verifies medicines, dosage, and availability</li>
+          <li><i class="ri-check-line"></i> We message you a confirmed price and delivery ETA</li>
+          <li><i class="ri-check-line"></i> Approve to dispatch — usually within 60 minutes</li>
+        </ol>
+        <div class="ms-feature" style="margin-top:var(--ms-s-3);"><div class="ms-feature-icon"><i class="ri-lock-2-line"></i></div><h4>Your privacy matters</h4><p>Uploads are encrypted in transit and accessible only to our pharmacy team.</p></div>
+      </div>
+      <div data-aos="fade-left">
+        <form class="ms-form" data-validate style="background:var(--ms-card);padding:var(--ms-s-4);border-radius:var(--ms-radius);border:1px solid var(--ms-border);">
+          <div class="ms-form-row ms-form-row-2">
+            <div class="ms-field"><label>Full name *</label><input type="text" required placeholder="Jane Doe" /><div class="error-msg">Please enter your name.</div></div>
+            <div class="ms-field"><label>Phone *</label><input type="tel" required placeholder="+1 555 0000" /><div class="error-msg">Enter a valid phone number.</div></div>
+          </div>
+          <div class="ms-form-row ms-form-row-2">
+            <div class="ms-field"><label>Email</label><input type="email" placeholder="you@example.com" /></div>
+            <div class="ms-field"><label>Preferred delivery</label><select><option>Today · ASAP</option><option>Today · Evening</option><option>Tomorrow · Morning</option></select></div>
+          </div>
+          <div class="ms-field"><label>Delivery address *</label><input type="text" required placeholder="Street, city, ZIP" /><div class="error-msg">Enter your address.</div></div>
+          <div class="ms-field"><label>Prescription file *</label>
+            <label class="ms-upload"><i class="ri-upload-cloud-2-line"></i><div><b data-upload-label>Drop prescription or browse</b><br><small>PDF · JPG · PNG · max 10MB</small></div><input type="file" accept=".pdf,.jpg,.jpeg,.png" required /></label>
+            <div class="error-msg">Please attach your prescription.</div>
+          </div>
+          <div class="ms-field"><label>Medicine requirement</label><textarea placeholder="Optional notes about brand, quantity, or substitution."></textarea></div>
+          <div class="ms-field"><label>Doctor notes</label><textarea placeholder="Optional: dosage instructions, allergies, etc."></textarea></div>
+          <div class="ms-check"><input type="checkbox" required id="c1"><label for="c1">I consent to MediSphere reviewing my prescription and contacting me about it.</label></div>
+          <button type="submit" class="ms-btn ms-btn-primary"><i class="ri-send-plane-line"></i> Submit prescription</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ms-footer"><div class="ms-container"><div class="ms-footer-bottom">© <span data-year></span> MediSphere. All rights reserved.</div></div></footer>
+<script src="../js/main.js"></script>
+</body></html>
