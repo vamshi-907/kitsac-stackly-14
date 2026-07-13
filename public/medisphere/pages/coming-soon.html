@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Coming Soon – MediSphere</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+<link href="../css/style.css" rel="stylesheet" />
+<style>
+.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:520px;margin:var(--ms-s-4) auto;}
+.cd-cell{background:var(--ms-card);border:1px solid var(--ms-border);border-radius:var(--ms-radius);padding:var(--ms-s-3) var(--ms-s-2);}
+.cd-num{font-family:var(--ms-font-heading);font-size:2rem;color:var(--ms-primary-600);}
+.cd-lbl{font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ms-muted);}
+</style>
+</head>
+<body>
+<main style="min-height:100vh;display:grid;place-items:center;padding:var(--ms-s-6);text-align:center;background:radial-gradient(800px 400px at 50% 20%, var(--ms-highlight), transparent 60%);">
+  <div style="max-width:640px;">
+    <a href="../index.html" class="ms-logo" style="justify-content:center;"><span class="ms-logo-mark"><i class="ri-capsule-fill"></i></span> MediSphere</a>
+    <h1 style="margin-top:var(--ms-s-3);">Something Great Is Coming</h1>
+    <p>Our new store, wellness clinic and prescription portal — launching soon.</p>
+    <div class="cd-grid">
+      <div class="cd-cell"><div class="cd-num" id="cd-d">14</div><div class="cd-lbl">Days</div></div>
+      <div class="cd-cell"><div class="cd-num" id="cd-h">06</div><div class="cd-lbl">Hours</div></div>
+      <div class="cd-cell"><div class="cd-num" id="cd-m">42</div><div class="cd-lbl">Minutes</div></div>
+      <div class="cd-cell"><div class="cd-num" id="cd-s">18</div><div class="cd-lbl">Seconds</div></div>
+    </div>
+    <form data-validate style="display:flex;gap:8px;max-width:420px;margin:0 auto;flex-wrap:wrap;">
+      <div class="ms-field" style="flex:1;min-width:200px;"><input type="email" required placeholder="Notify me when it's live" aria-label="Email" /></div>
+      <button type="submit" class="ms-btn ms-btn-primary">Notify me</button>
+    </form>
+  </div>
+</main>
+<script src="../js/main.js"></script>
+<script>
+const target = new Date(Date.now() + 14*864e5 + 6*36e5 + 42*6e4).getTime();
+setInterval(() => {
+  let d = Math.max(0, target - Date.now());
+  const days = Math.floor(d/864e5); d -= days*864e5;
+  const hrs = Math.floor(d/36e5); d -= hrs*36e5;
+  const min = Math.floor(d/6e4); d -= min*6e4;
+  const sec = Math.floor(d/1e3);
+  document.getElementById('cd-d').textContent = String(days).padStart(2,'0');
+  document.getElementById('cd-h').textContent = String(hrs).padStart(2,'0');
+  document.getElementById('cd-m').textContent = String(min).padStart(2,'0');
+  document.getElementById('cd-s').textContent = String(sec).padStart(2,'0');
+},1000);
+</script>
+</body></html>
