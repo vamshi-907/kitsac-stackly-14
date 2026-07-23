@@ -76,5 +76,6 @@ const html = products.map((p,i)=>`
   </div>
 </article>`).join('');
 document.getElementById('ms-catalog').innerHTML = html;
+document.querySelectorAll('#ms-catalog [data-aos]').forEach(el => el.classList.add('aos-in'));
 </script>
 </body></html>
